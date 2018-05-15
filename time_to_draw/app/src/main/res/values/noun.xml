@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="noun">
+        <item>кошка</item>
+        <item>собака</item>
+        <item>попугай</item>
+        <item>заяц</item>
+        <item>хомяк</item>
+        <item>крокодил</item>
+        <item>хорёк</item>
+        <item>бизон</item>
+        <item>дельфин</item>
+        <item>орёл</item>
+        <item>пони</item>
+        <item>обезьяна</item>
+        <item>омар</item>
+        <item>корова</item>
+        <item>олень</item>
+        <item>утка</item>
+        <item>кролик</item>
+        <item>паук</item>
+        <item>волк</item>
+        <item>индейка</item>
+        <item>лев</item>
+        <item>свинья</item>
+        <item>змея</item>
+        <item>акула</item>
+        <item>медведь</item>
+        <item>кенгуру</item>
+        <item>рыба</item>
+        <item>курица</item>
+        <item>лошадь</item>
+        <item>ёж</item>
+        <item>волк</item>
+    </array>
+</resources>

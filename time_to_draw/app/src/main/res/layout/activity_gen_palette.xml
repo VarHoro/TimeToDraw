@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_lamp"
+    tools:context=".activities.ActPalette">
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/back_palette"/>
+
+    <FrameLayout
+        android:id="@+id/white_rec"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id = "@+id/text_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "@string/first_in"
+            android:textAlignment="center"
+            android:textSize ="30sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:visibility="visible"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginBottom="60dp">
+            <LinearLayout
+                android:id="@+id/palette_container_part1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/color1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/color2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/palette_container_part2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:id="@+id/color3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/colorAccent"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/color4"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button_gen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="12dp"
+        android:background="@android:color/holo_blue_dark"
+        android:elevation="5dp"
+        android:onClick="onGenerateClicked"
+        android:text="@string/genbutton"
+        android:textSize="18sp"
+        android:theme="@android:style/Theme.Material"
+        app:layout_constraintBottom_toBottomOf="@+id/white_rec"
+        app:layout_constraintEnd_toEndOf="@+id/white_rec"
+        app:layout_constraintStart_toStartOf="@+id/white_rec" />
+
+    <FrameLayout
+        android:id="@+id/flaggie"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/flaggie"
+        app:layout_constraintEnd_toEndOf="@+id/white_rec"
+        app:layout_constraintTop_toTopOf="@+id/white_rec">
+
+        <ToggleButton
+            android:id="@+id/toggle_star"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/star_off"
+            android:checked="false"
+            android:onClick="onToggleClicked"
+            android:textOff=""
+            android:textOn="" />
+
+    </FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:tint="@android:color/white"
+        app:backgroundTint="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@android:color/darker_gray"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        tools:srcCompat="@android:drawable/ic_menu_camera" />
+
+</android.support.constraint.ConstraintLayout>
